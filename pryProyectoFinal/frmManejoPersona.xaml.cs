@@ -29,10 +29,23 @@ namespace pryProyectoFinal
         {
             this.InitializeComponent();
             lsvPersonas.ItemsSource = objPersona.consultarPersona();
+            cmbGrupoSanguineo.Items.Add("A+");
+            cmbGrupoSanguineo.Items.Add("O+");
+            cmbGrupoSanguineo.Items.Add("AB+");
+            cmbGrupoSanguineo.Items.Add("B+");
+            cmbGrupoSanguineo.Items.Add("A-");
+            cmbGrupoSanguineo.Items.Add("O-");
+            cmbGrupoSanguineo.Items.Add("AB-");
+            cmbGrupoSanguineo.Items.Add("B-");
+
+            cmbEstadoCivil.Items.Add("Casado");
+            cmbEstadoCivil.Items.Add("Soltero");
+            cmbNacionalidad.Items.Add("Ecuador");
+            cmbNacionalidad.Items.Add("Colombianos");
         }
 
         string mensaje = "";
-        private async void btnIngresar_Click(object sender, RoutedEventArgs e)
+        private async void BtnIngresar_Click(object sender, RoutedEventArgs e)
         {
             string genero = "";
             if (chkbxMasculino.IsChecked==true)
@@ -62,7 +75,7 @@ namespace pryProyectoFinal
             lsvPersonas.ItemsSource = objPersona.consultarPersona();
         }
 
-        private async void btnModificar_Click(object sender, RoutedEventArgs e)
+        private async void BtnModificar_Click(object sender, RoutedEventArgs e)
         {
             string genero = "";
             if (chkbxMasculino.IsChecked == true)
@@ -85,7 +98,7 @@ namespace pryProyectoFinal
             limpiarCampos();
         }
 
-        private async void btnEliminar_Click(object sender, RoutedEventArgs e)
+        private async void BtnEliminar_Click(object sender, RoutedEventArgs e)
         {
             if (objPersona.eliminarPersona(idpersona))
             {
@@ -96,12 +109,12 @@ namespace pryProyectoFinal
             lsvPersonas.ItemsSource = objPersona.consultarPersona();
         }
 
-        private void btnVisualizar_Click(object sender, RoutedEventArgs e)
+        private void BtnVisualizar_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void btnLimpiar_Click(object sender, RoutedEventArgs e)
+        private void BtnLimpiar_Click(object sender, RoutedEventArgs e)
         {
             limpiarCampos();
         }
@@ -120,7 +133,7 @@ namespace pryProyectoFinal
             //cmbEstadoCivil.SelectedItem=;
         }
 
-        private void lsvPersonas_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void LsvPersonas_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             clsPersona seleccionado = (clsPersona)lsvPersonas.SelectedItem;
 
@@ -145,6 +158,21 @@ namespace pryProyectoFinal
                 idpersona = seleccionado.IdPersona;
 
             }
+        }
+
+        private void cmbGrupoSanguineo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void cmbEstadoCivil_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void cmbNacionalidad_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

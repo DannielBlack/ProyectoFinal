@@ -39,12 +39,12 @@ namespace pryProyectoFinal
 
                 cmd.Parameters.Add("@Nombres", SqlDbType.VarChar, 50).Value = Nombres;
                 cmd.Parameters.Add("@Apellidos", SqlDbType.VarChar, 50).Value = Apellidos;
-                cmd.Parameters.Add("@Genero", SqlDbType.VarChar, 50).Value = Genero;
+                cmd.Parameters.Add("@Genero", SqlDbType.Char, 1).Value = Genero;
                 cmd.Parameters.Add("@Cedula", SqlDbType.Int).Value = Cedula;
                 cmd.Parameters.Add("@Nacionalidad", SqlDbType.VarChar, 50).Value = Nacionalidad;
                 cmd.Parameters.Add("@Direccion", SqlDbType.VarChar, 50).Value = Direccion;
                 cmd.Parameters.Add("@FechaNacimiento", SqlDbType.DateTime).Value = FechaNacimiento;
-                cmd.Parameters.Add("@GrupoSanguineo", SqlDbType.VarChar, 50).Value = GrupoSanguineo;
+                cmd.Parameters.Add("@GrupoSanguineo", SqlDbType.Char, 2).Value = GrupoSanguineo;
                 cmd.Parameters.Add("@EstadoCivil", SqlDbType.VarChar, 50).Value = EstadoCivil;
                 cmd.Parameters.Add("@Profesion", SqlDbType.VarChar, 50).Value = Profesion;
 
@@ -125,18 +125,17 @@ namespace pryProyectoFinal
                     "EstadoCivil=@EstadoCivil, Profesion=@Profesion where idpersona=@IdPersona";
 
                 SqlCommand cmd = new SqlCommand(sqlActualiza, hereda.connect);
-
+                cmd.Parameters.Add("@IdPersona", SqlDbType.Int).Value = 1;
                 cmd.Parameters.Add("@Nombres", SqlDbType.VarChar, 50).Value = Nombres;
                 cmd.Parameters.Add("@Apellidos", SqlDbType.VarChar, 50).Value = Apellidos;
-                cmd.Parameters.Add("@Genero", SqlDbType.VarChar, 50).Value = Genero;
-                cmd.Parameters.Add("@Cedula", SqlDbType.Int, 4).Value = Cedula;
+                cmd.Parameters.Add("@Genero", SqlDbType.Char, 1).Value = Genero;
+                cmd.Parameters.Add("@Cedula", SqlDbType.Int).Value = Cedula;
                 cmd.Parameters.Add("@Nacionalidad", SqlDbType.VarChar, 50).Value = Nacionalidad;
                 cmd.Parameters.Add("@Direccion", SqlDbType.VarChar, 50).Value = Direccion;
-                cmd.Parameters.Add("@FechaNacimiento", SqlDbType.VarChar, 50).Value = FechaNacimiento;
-                cmd.Parameters.Add("@GrupoSanguineo", SqlDbType.VarChar, 50).Value = GrupoSanguineo;
+                cmd.Parameters.Add("@FechaNacimiento", SqlDbType.DateTime).Value = FechaNacimiento;
+                cmd.Parameters.Add("@GrupoSanguineo", SqlDbType.Char, 2).Value = GrupoSanguineo;
                 cmd.Parameters.Add("@EstadoCivil", SqlDbType.VarChar, 50).Value = EstadoCivil;
                 cmd.Parameters.Add("@Profesion", SqlDbType.VarChar, 50).Value = Profesion;
-                cmd.Parameters.Add("@IdPersona", SqlDbType.Int, 4).Value = idpersona;
 
                 cmd.ExecuteNonQuery();
 
