@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace pryProyectoFinal
 {
     public class clsSalario
-    {
+    {/*
         public int IdSalario { get; set; }
         public string Persona { get; set; }
         public decimal Valor { get; set; }
@@ -173,5 +173,5 @@ namespace pryProyectoFinal
 
         }
     }
-}
+*/}
 }

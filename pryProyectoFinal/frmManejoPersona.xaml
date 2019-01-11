@@ -30,7 +30,7 @@
         <TextBox x:Name="txtCedula" HorizontalAlignment="Left" Margin="235,265,0,0" Text="" VerticalAlignment="Top" Width="300"/>
         <TextBox x:Name="txtDireccion" HorizontalAlignment="Left" Margin="235,385,0,0" Text="" VerticalAlignment="Top" Width="300"/>
         <TextBox x:Name="txtProfesion" HorizontalAlignment="Left" Margin="235,425,0,0" Text="" VerticalAlignment="Top" Width="300"/>
-        <ListView x:Name="lsvPersonas" Margin="608,145,117,181" SelectionChanged="lsvPersonas_SelectionChanged" HorizontalAlignment="Stretch">
+        <ListView x:Name="lsvPersonas" Margin="608,145,117,181" SelectionChanged="LsvPersonas_SelectionChanged" HorizontalAlignment="Stretch">
             <ListView.Background>
                 <SolidColorBrush Color="#FFE8E7DB" Opacity="0.7"/>
             </ListView.Background>
@@ -46,14 +46,14 @@
         <CheckBox x:Name="chkbxMasculino" Content="Masculino" HorizontalAlignment="Left" Margin="235,225,0,0" VerticalAlignment="Top" RequestedTheme="Light"/>
         <CheckBox x:Name="chkbxFemenino" Content="Femenino" HorizontalAlignment="Left" Margin="365,225,0,0" VerticalAlignment="Top" RequestedTheme="Light"/>
         <DatePicker x:Name="dtpFechaNacimiento" HorizontalAlignment="Left" Margin="235,305,0,0" VerticalAlignment="Top" Width="300"/>
-        <Button x:Name="btnIngresar" Content="Ingresar" HorizontalAlignment="Left" Margin="315,545,0,0" VerticalAlignment="Top" Width="100" Click="btnIngresar_Click" Foreground="Black"/>
-        <Button x:Name="btnLimpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="435,545,0,0" VerticalAlignment="Top" Width="100" Click="btnLimpiar_Click" Foreground="Black"/>
-        <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="608,545,0,0" VerticalAlignment="Top" Width="100" Click="btnEliminar_Click" Foreground="Black"/>
-        <Button x:Name="btnModificar" Content="Modificar" HorizontalAlignment="Left" Margin="738,545,0,0" VerticalAlignment="Top" Width="100" Click="btnModificar_Click" Foreground="Black"/>
-        <Button x:Name="btnVisualizar" Content="Visualizar" HorizontalAlignment="Left" Margin="868,545,0,0" VerticalAlignment="Top" Width="100" Click="btnVisualizar_Click" Foreground="Black"/>
-        <ComboBox x:Name="cmbGrupoSanguineo" HorizontalAlignment="Left" Margin="235,465,0,0" VerticalAlignment="Top" Width="300"/>
-        <ComboBox x:Name="cmbEstadoCivil" HorizontalAlignment="Left" Margin="235,505,0,0" VerticalAlignment="Top" Width="300"/>
-        <ComboBox x:Name="cmbNacionalidad" HorizontalAlignment="Left" Margin="235,345,0,0" VerticalAlignment="Top" Width="300"/>
+        <Button x:Name="btnIngresar" Content="Ingresar" HorizontalAlignment="Left" Margin="315,545,0,0" VerticalAlignment="Top" Width="100" Click="BtnIngresar_Click" Foreground="Black"/>
+        <Button x:Name="btnLimpiar" Content="Limpiar" HorizontalAlignment="Left" Margin="435,545,0,0" VerticalAlignment="Top" Width="100" Click="BtnLimpiar_Click" Foreground="Black"/>
+        <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="608,545,0,0" VerticalAlignment="Top" Width="100" Click="BtnEliminar_Click" Foreground="Black"/>
+        <Button x:Name="btnModificar" Content="Modificar" HorizontalAlignment="Left" Margin="738,545,0,0" VerticalAlignment="Top" Width="100" Click="BtnModificar_Click" Foreground="Black"/>
+        <Button x:Name="btnVisualizar" Content="Visualizar" HorizontalAlignment="Left" Margin="868,545,0,0" VerticalAlignment="Top" Width="100" Click="BtnVisualizar_Click" Foreground="Black"/>
+        <ComboBox x:Name="cmbGrupoSanguineo" HorizontalAlignment="Left" Margin="235,465,0,0" VerticalAlignment="Top" Width="300" SelectionChanged="cmbGrupoSanguineo_SelectionChanged"/>
+        <ComboBox x:Name="cmbEstadoCivil" HorizontalAlignment="Left" Margin="235,505,0,0" VerticalAlignment="Top" Width="300" SelectionChanged="cmbEstadoCivil_SelectionChanged"/>
+        <ComboBox x:Name="cmbNacionalidad" HorizontalAlignment="Left" Margin="235,345,0,0" VerticalAlignment="Top" Width="300" SelectionChanged="cmbNacionalidad_SelectionChanged"/>
         
     </Grid>
 </Page>
